@@ -6,16 +6,11 @@ public class Room : MonoBehaviour
 {
     public bool isOnFire = false;
 
-
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.tag == "Player")
+        {
+            Debug.Log("player is in Room");
+        }
     }
 }

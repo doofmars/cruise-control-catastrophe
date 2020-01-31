@@ -38,7 +38,7 @@ public class Firestarter : MonoBehaviour
                 //Burn a room
                 int roomNumber = Random.Range(0, rooms.Length);
                 Debug.Log("fire in room " + roomNumber);
-
+                ((Room)rooms[roomNumber]).isOnFire = true;
             }
 
             
