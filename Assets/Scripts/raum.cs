@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class raum : MonoBehaviour
+public class Raum : MonoBehaviour
 {
 
     private Text currentRoomIndicatorText;
@@ -21,7 +21,6 @@ public class raum : MonoBehaviour
     {
 
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
