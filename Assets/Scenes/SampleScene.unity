@@ -295,7 +295,12 @@ PrefabInstance:
     - target: {fileID: 7083605240757291859, guid: 20ebb5d0136e8ec4b9162737c1913955,
         type: 3}
       propertyPath: m_Name
-      value: HealthBar
+      value: ShipHealthBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083605240757291859, guid: 20ebb5d0136e8ec4b9162737c1913955,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7083605241156461932, guid: 20ebb5d0136e8ec4b9162737c1913955,
         type: 3}
@@ -800,9 +805,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1020503275}
+  - component: {fileID: 1020503276}
   m_Layer: 0
   m_Name: ShipHealth
-  m_TagString: Untagged
+  m_TagString: ShipHealth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -823,6 +829,19 @@ Transform:
   m_Father: {fileID: 472341036}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1020503276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020503274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0028232acf83cf740b2f932648958144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firedamage: 2
 --- !u!1 &1357431705
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,7 +1189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Ship Health:'
+  m_Text: 'Ship Damage:'
 --- !u!222 &1912493470
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1179,6 +1198,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1912493467}
   m_CullTransparentMesh: 0
+--- !u!1 &2009616124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7083605240757291859, guid: 20ebb5d0136e8ec4b9162737c1913955,
+    type: 3}
+  m_PrefabInstance: {fileID: 185340058}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2009616125 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7083605240757291856, guid: 20ebb5d0136e8ec4b9162737c1913955,
+    type: 3}
+  m_PrefabInstance: {fileID: 185340058}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009616124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 660a966fde1f7ef4987eda7334eeb956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2009616126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009616124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 484383fae9d0fdd4a83769f1291d46f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 2009616125}
+  currentHealth: 0
+  maxHealth: 100
 --- !u!1001 &3288823315530846388
 PrefabInstance:
   m_ObjectHideFlags: 0
