@@ -9,6 +9,7 @@ public class HealthBar : MonoBehaviour
     private Vector3 vector3 = new Vector3(1f, 1f);
 
     public bool hideWhenFull = true;
+    public bool hideWhenEmpty = true;
     private bool visible = true;
 
     public float maxHealth = 100f;
@@ -21,9 +22,10 @@ public class HealthBar : MonoBehaviour
         {
             if (value < 0f)
             {
-                value = 0f;
-            }
-            if (value < maxHealth)
+                _currentHealth = 0f;
+                visible = false || !hideWhenEmpty;
+            } 
+            else if (value < maxHealth)
             {
                 _currentHealth = value;
                 visible = true;

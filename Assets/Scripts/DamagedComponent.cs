@@ -5,17 +5,20 @@ using UnityEngine;
 public class DamagedComponent : MonoBehaviour
 {
     [SerializeField] public HealthBar healthBar;
+    private SpriteRenderer spriteRenderer;
+    public Sprite deadSprite;
     private Room parent;
     public float maxHealth = 100f;
     public float repairRate = 20f;
     public float maxOperatingTemperature = 400f;
+    private bool broken = false;
+    private int repairPersonnel = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         healthBar.maxHealth = maxHealth;
         parent = transform.GetComponentInParent<Room>();
-        Debug.Log("Found parent " + parent.name);
     }
 
     // Update is called once per frame
@@ -26,26 +29,26 @@ public class DamagedComponent : MonoBehaviour
             var time = Time.deltaTime;
             healthBar.currentHealth -= time * 0.05f * maxHealth;
         }
-    }
-
-    void UpdateFixed()
-    {
+        if (healthBar.currentHealth <= 0f && !broken)
+        {
+            broken = true;
+            spriteRenderer.sprite = deadSprite;
+            spriteRenderer.UpdateGIMaterials();
+        }
+        if (!healthBar.IsFull() && !broken && repairPersonnel > 0)
+        {
+            float timer = Time.deltaTime;
+            healthBar.currentHealth += timer * repairRate * repairPersonnel;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        repairPersonnel++;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (!healthBar.IsFull()) { 
-            float timer = Time.deltaTime;
-            healthBar.currentHealth += timer * repairRate;
-        }
+        repairPersonnel--;
     }
 }
