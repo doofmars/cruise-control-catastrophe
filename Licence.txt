@@ -17,3 +17,8 @@ Sound effects:
 
 	wrench 02.wav by Anthousai
 	https://freesound.org/people/Anthousai/sounds/399011/
+
+Graphics:
+
+	The Carina Nebula by ESO
+	https://www.eso.org/public/images/etamosaicnm2/
