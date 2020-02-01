@@ -30,9 +30,9 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        Room room = collision.gameObject.GetComponent("Room") as Room;
+        GameObject room = other.gameObject;
         if (room.CompareTag("Room"))
         {
             // Player exits room
