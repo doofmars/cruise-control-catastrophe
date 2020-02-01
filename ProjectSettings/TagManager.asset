@@ -8,6 +8,7 @@ TagManager:
   - Bridge
   - myText
   - ShipHealth
+  - Music
   layers:
   - Default
   - TransparentFX
