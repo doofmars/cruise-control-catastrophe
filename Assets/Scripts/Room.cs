@@ -31,10 +31,10 @@ public class Room : MonoBehaviour
         var time = Time.deltaTime;
         if (isOnFire)
         {
-            temperature += time * 30f;
+            temperature += time * 15f;
         } else
         {
-            temperature -= 0.02f * (290f - temperature) * time;
+            temperature -= 0.02f * (temperature - 290f) * time;
         }
     }
 
