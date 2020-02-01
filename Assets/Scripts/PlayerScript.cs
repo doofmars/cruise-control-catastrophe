@@ -1,10 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
     private Room currentRoom;
+    public UiManager uiManager;
+    private Text currentRoomIndicatorText;
+    void Start()
+    {
+        currentRoomIndicatorText = uiManager.currentRoomIndicator;
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,27 +24,37 @@ public class PlayerScript : MonoBehaviour
                 (currentRoom.GetComponent("Room") as Room).isOnFire = false;
             }
         }
+        currentRoomIndicatorText.text = currentRoom.roomName + " (" + currentRoom.temperature + "K)";
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameObject room = other.gameObject;
+        GameObject room = collision.gameObject;
         if (room.CompareTag("Room"))
         {
-            // Room entered
             currentRoom = (room.GetComponent("Room") as Room);
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        GameObject room = other.gameObject;
-        if (room.CompareTag("Room"))
-        {
-            // Player exits room
-            string name = (room.GetComponent("Room") as Room).roomName;
-            Debug.Log("Player exited room" + name);
-            currentRoom = null;
-        }
-    }
+    //private void OnTriggerStay2D(Collider2D other)
+    //{
+    //    GameObject room = other.gameObject;
+    //    if (room.CompareTag("Room"))
+    //    {
+    //        // Room entered
+    //        currentRoom = (room.GetComponent("Room") as Room);
+    //    }
+    //}
+
+    //private void OnTriggerExit2D(Collider2D other)
+    //{
+    //    GameObject room = other.gameObject;
+    //    if (room.CompareTag("Room"))
+    //    {
+    //        // Player exits room
+    //        string name = (room.GetComponent("Room") as Room).roomName;
+    //        Debug.Log("Player exited room" + name);
+    //        currentRoom = null;
+    //    }
+    //}
 }
