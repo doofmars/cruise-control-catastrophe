@@ -1,32 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class GoalProgress : MonoBehaviour
 {
     // Start is called before the first frame update
-    public HealthBar health;
+    public HealthBar victoryProgress;
+    public DamagedComponent engine1;
+    public DamagedComponent engine2;
+    public DamagedComponent engine3;
+
     public float progressRate = 5f;
 
     private int playersInsideRoom = 0;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playersInsideRoom>0)
+        if (playersInsideRoom > 0)
         {
-            health.currentHealth += progressRate;
+            int numberOfBrokenEngines = 0;
+            if (engine1.healthBar.currentHealth == 0) numberOfBrokenEngines++;
+            if (engine2.healthBar.currentHealth == 0) numberOfBrokenEngines++;
+            if (engine3.healthBar.currentHealth == 0) numberOfBrokenEngines++;
+            float ratioOfIntactEngines = (3-numberOfBrokenEngines) / 3.0f;
+            victoryProgress.currentHealth += progressRate * ratioOfIntactEngines;
         }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        Debug.Log("Stay bridge");
-        health.currentHealth += progressRate;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -36,6 +37,6 @@ public class GoalProgress : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        playersInsideRoom++; 
+        playersInsideRoom++;
     }
 }

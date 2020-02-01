@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DamagedComponent : MonoBehaviour
 {
@@ -43,7 +41,8 @@ public class DamagedComponent : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (!healthBar.IsFull()) { 
+        if (!healthBar.IsFull())
+        {
             float timer = Time.deltaTime;
             healthBar.currentHealth += timer * repairRate;
         }

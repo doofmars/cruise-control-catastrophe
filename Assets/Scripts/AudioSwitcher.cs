@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AudioSwitcher : MonoBehaviour
 {
@@ -46,7 +43,8 @@ public class AudioSwitcher : MonoBehaviour
         {
             if (!_playingPanic)
                 PlayPanic();
-        } else
+        }
+        else
         {
             if (_playingPanic)
                 PlayNormal();
