@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 7219812541475379410}
   - component: {fileID: 2519791380142179205}
   - component: {fileID: 8848433733415866045}
+  - component: {fileID: 1659317669992342701}
   - component: {fileID: 200375065416360653}
   m_Layer: 0
   m_Name: EventSystem
@@ -132,6 +133,23 @@ MonoBehaviour:
   fireRate: 80
   waitTime: 1
   layoutManager: {fileID: 0}
+--- !u!114 &1659317669992342701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9090998064663140683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c90635f2be3a5c4bbc1a16cb982353c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidPrefab: {fileID: 5391055124083557087, guid: feb665ec329ebc94aa8fbbf358ae7454,
+    type: 3}
+  camera: {fileID: 0}
+  fireRate: 60
+  waitTime: 7
 --- !u!82 &200375065416360653
 AudioSource:
   m_ObjectHideFlags: 0
