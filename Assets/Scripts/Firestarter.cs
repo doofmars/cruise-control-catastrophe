@@ -10,6 +10,8 @@ public class Firestarter : MonoBehaviour
 
     private float timer = 0.0f;
     private Room[] rooms;
+    private bool fire;
+    private AudioSource _firePlayer;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +46,7 @@ public class Firestarter : MonoBehaviour
 
 
         }
+        _firePlayer = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -67,7 +70,29 @@ public class Firestarter : MonoBehaviour
                     //Debug.Log("fire in room " + (rooms[roomNumber].GetComponent("RoomMeta") as RoomMeta).roomname);
                     (rooms[roomNumber].GetComponent("Room") as Room).isOnFire = true;
                 }
+
             }
+        }
+
+        fire = false;
+        for (int i = 0; i < rooms.Length; i++)
+        {
+            if ((rooms[i].GetComponent("Room") as Room).isOnFire)
+            {
+                fire = true;
+                break;
+            }
+        }
+
+        if (fire)
+        {
+            if (!_firePlayer.isPlaying)
+                _firePlayer.Play();
+        }
+        else
+        {
+            if (_firePlayer.isPlaying)
+                _firePlayer.Stop();
         }
     }
     private Vector2 getRandomPointInBounds(PolygonCollider2D polygonCollider2D)

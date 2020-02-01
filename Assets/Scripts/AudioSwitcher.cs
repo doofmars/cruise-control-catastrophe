@@ -8,9 +8,11 @@ public class AudioSwitcher : MonoBehaviour
     public AudioClip song1Panic;
     public AudioClip song2Panic;
     public AudioClip song3Panic;
+    public AudioClip fire;
     private bool _playingPanic;
 
     private AudioSource _musicPlayer;
+
     void Start()
     {
         _playingPanic = false;
@@ -18,8 +20,6 @@ public class AudioSwitcher : MonoBehaviour
         _musicPlayer.loop = true;
         _musicPlayer.clip = ChooseRandomSong();
         _musicPlayer.Play();
-        //_musicPlayer.clip = song2;
-        //_musicPlayer.clip = song3;
     }
 
     private AudioClip ChooseRandomSong()
@@ -38,6 +38,11 @@ public class AudioSwitcher : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        SwitchBetweenMusicModes();
+    }
+
+    private void SwitchBetweenMusicModes()
     {
         if ((GameObject.FindGameObjectWithTag("ShipHealth").GetComponent("ShipDamageBar") as ShipDamageBar).currentDamage >= 60.0)
         {
