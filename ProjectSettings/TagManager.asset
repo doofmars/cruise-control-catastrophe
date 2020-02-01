@@ -7,6 +7,7 @@ TagManager:
   - Room
   - Bridge
   - myText
+  - ShipHealth
   layers:
   - Default
   - TransparentFX
