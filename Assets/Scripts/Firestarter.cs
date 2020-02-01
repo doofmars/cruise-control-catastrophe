@@ -36,7 +36,7 @@ public class Firestarter : MonoBehaviour
         if (timer > waitTime)
         {
             // Remove the recorded 2 seconds.
-            timer = timer - waitTime;
+            timer -= waitTime;
 
             if (Random.Range(0, 100) < fireRate)
             {
