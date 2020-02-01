@@ -505,6 +505,7 @@ GameObject:
   - component: {fileID: 472341035}
   - component: {fileID: 472341034}
   - component: {fileID: 472341033}
+  - component: {fileID: 472341037}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -594,6 +595,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &472341037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472341032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b0a45e2110fe95478aece65a0251f39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentRoomIndicator: {fileID: 1357431707}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1171,6 +1185,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 665512314242594939, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: m_Name
+      value: Engine
+      objectReference: {fileID: 0}
     - target: {fileID: 2012477597065840462, guid: cc7f7f1a9484167489b2cee97978688f,
         type: 3}
       propertyPath: currentRoomIndicator
@@ -1291,5 +1310,216 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8112170168800351234, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
+    - {fileID: 3290019925608386450, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
+    - {fileID: 3290019924157805401, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
+    - {fileID: 3290019924902629736, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
+    - {fileID: 4185134135444574089, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
+    - {fileID: 2088192142219936951, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
+    - {fileID: 3192540755662537162, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
+    - {fileID: 5749824393396576059, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
+--- !u!1 &3290019924157816919 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3290019925100780600, guid: cc7f7f1a9484167489b2cee97978688f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3290019924157816918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3290019924157816920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4494397277046066258, guid: cc7f7f1a9484167489b2cee97978688f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3290019924157816918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3290019924157816921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7979957981820295177, guid: cc7f7f1a9484167489b2cee97978688f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3290019924157816918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3290019924157816922 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 665512314242594939, guid: cc7f7f1a9484167489b2cee97978688f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3290019924157816918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3290019924157816923 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4002449234488901524, guid: cc7f7f1a9484167489b2cee97978688f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3290019924157816918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3290019924157816924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3290019924902629741, guid: cc7f7f1a9484167489b2cee97978688f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3290019924157816918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3290019924157816925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3290019924157805402, guid: cc7f7f1a9484167489b2cee97978688f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3290019924157816918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3290019924157816926 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3290019925608386455, guid: cc7f7f1a9484167489b2cee97978688f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3290019924157816918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3290019924157816927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3290019924030060284, guid: cc7f7f1a9484167489b2cee97978688f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3290019924157816918}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3290019924157816928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290019924157816919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 798bdd1c4866e9c458c6796a4e2d0884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiManager: {fileID: 0}
+--- !u!114 &3290019924157816929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290019924157816920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4883703ce04546a4fb0d3972c82219b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnFire: 0
+  fireInstance: {fileID: 0}
+  roomName: Shield Generator Room
+  layoutManager: {fileID: 3290019924157816928}
+  temperature: 290
+--- !u!114 &3290019924157816930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290019924157816921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4883703ce04546a4fb0d3972c82219b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnFire: 0
+  fireInstance: {fileID: 0}
+  roomName: Generator Room
+  layoutManager: {fileID: 3290019924157816928}
+  temperature: 290
+--- !u!114 &3290019924157816931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290019924157816922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4883703ce04546a4fb0d3972c82219b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnFire: 0
+  fireInstance: {fileID: 0}
+  roomName: Engine Room
+  layoutManager: {fileID: 3290019924157816928}
+  temperature: 290
+--- !u!114 &3290019924157816932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290019924157816923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4883703ce04546a4fb0d3972c82219b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnFire: 0
+  fireInstance: {fileID: 0}
+  roomName: Storage
+  layoutManager: {fileID: 3290019924157816928}
+  temperature: 290
+--- !u!114 &3290019924157816933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290019924157816924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4883703ce04546a4fb0d3972c82219b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnFire: 0
+  fireInstance: {fileID: 0}
+  roomName: Hallway
+  layoutManager: {fileID: 3290019924157816928}
+  temperature: 290
+--- !u!114 &3290019924157816934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290019924157816925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4883703ce04546a4fb0d3972c82219b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnFire: 0
+  fireInstance: {fileID: 0}
+  roomName: Lab
+  layoutManager: {fileID: 3290019924157816928}
+  temperature: 290
+--- !u!114 &3290019924157816935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290019924157816926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4883703ce04546a4fb0d3972c82219b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnFire: 0
+  fireInstance: {fileID: 0}
+  roomName: Medical Bay
+  layoutManager: {fileID: 3290019924157816928}
+  temperature: 290
+--- !u!114 &3290019924157816936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3290019924157816927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4883703ce04546a4fb0d3972c82219b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOnFire: 0
+  fireInstance: {fileID: 0}
+  roomName: Bridge
+  layoutManager: {fileID: 0}
+  temperature: 290

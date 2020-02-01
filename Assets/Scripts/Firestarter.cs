@@ -8,9 +8,10 @@ public class Firestarter : MonoBehaviour
     public float waitTime = 5.0f;
 
     public GameObject firePrefab;
+    public LayoutManager layoutManager;
 
     private float timer = 0.0f;
-    private GameObject[] rooms;
+    private Room[] rooms;
 
     // Start is called before the first frame update
     void Start()
@@ -19,18 +20,17 @@ public class Firestarter : MonoBehaviour
         {
             Debug.LogError("Warning, fire prefab not defined in Firestarter");
         }
-        rooms = GameObject.FindGameObjectsWithTag("Room");
+        rooms = layoutManager.GetRooms();
         Debug.Log(rooms.Length);
 
         for(int i = 0; i < rooms.Length; i++)
         {
-            rooms[i].AddComponent<Room>();
-            Room r = ((Room)rooms[i].GetComponent("Room"));
+            Room r = rooms[i];
 
             r.fireInstance = Instantiate(firePrefab);
             r.fireInstance.transform.parent = r.transform;
             
-            PolygonCollider2D roomCollider = r.GetComponent<PolygonCollider2D>();
+            PolygonCollider2D roomCollider = r.gameObject.GetComponent<PolygonCollider2D>();
             while (true)
             {
                 Vector3 extents = r.fireInstance.GetComponent<Collider2D>().bounds.extents;

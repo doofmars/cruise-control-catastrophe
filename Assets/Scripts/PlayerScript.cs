@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    private GameObject playerLocation;
+    private Room currentRoom;
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButton("Fire1"))
         {
-            if (playerLocation != null && playerLocation.CompareTag("Room") && (playerLocation.GetComponent("Room") as Room).isOnFire)
+            if (currentRoom != null && currentRoom.CompareTag("Room") && (currentRoom.GetComponent("Room") as Room).isOnFire)
             {
                 Debug.Log("Player has extingushed room");
-                (playerLocation.GetComponent("Room") as Room).isOnFire = false;
+                (currentRoom.GetComponent("Room") as Room).isOnFire = false;
             }
         }
     }
@@ -25,8 +25,7 @@ public class PlayerScript : MonoBehaviour
         if (room.CompareTag("Room"))
         {
             // Room entered
-            string name = (room.GetComponent("RoomMeta") as RoomMeta).roomname;
-            playerLocation = room;
+            currentRoom = (room.GetComponent("Room") as Room);
         }
     }
 
@@ -36,9 +35,9 @@ public class PlayerScript : MonoBehaviour
         if (room.CompareTag("Room"))
         {
             // Player exits room
-            string name = (room.GetComponent("RoomMeta") as RoomMeta).roomname;
+            string name = (room.GetComponent("Room") as Room).roomName;
             Debug.Log("Player exited room" + name);
-            playerLocation = null;
+            currentRoom = null;
         }
     }
 }
