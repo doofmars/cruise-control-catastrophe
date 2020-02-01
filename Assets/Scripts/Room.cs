@@ -8,11 +8,15 @@ public class Room : MonoBehaviour
     // Reference to the Prefab. Drag a Prefab into this field in the Inspector.
     public GameObject myPrefab;
 
-    private bool isFireDisplayed = false;
+    public GameObject fireInstance;
+
+    private void Start()
+    {
+    }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Instantiate(myPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         if (other.tag == "Player")
         {
             Debug.Log("player is in Room");
@@ -22,13 +26,6 @@ public class Room : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isOnFire && !isFireDisplayed)
-        {
-            isFireDisplayed = true;
-
-            // Instantiate at position (0, 0, 0) and zero rotation.
-            Instantiate(myPrefab, GetComponent<Collider2D>().offset, Quaternion.identity);
-        }
+        fireInstance.SetActive(isOnFire);
     }
-
 }

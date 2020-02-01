@@ -7,6 +7,8 @@ public class Firestarter : MonoBehaviour
     public int fireRate = 20;
     public float waitTime = 5.0f;
 
+    public GameObject firePrefab;
+
     private float timer = 0.0f;
     private float visualTime = 0.0f;
     private long timeSinceLastFire = 0;
@@ -17,6 +19,13 @@ public class Firestarter : MonoBehaviour
     {
         rooms = FindObjectsOfType(typeof(Room));
         Debug.Log(rooms.Length);
+
+        for(int i = 0; i < rooms.Length; i++)
+        {
+            Room r = ((Room)rooms[i]);
+            r.fireInstance = Instantiate(firePrefab, r.GetComponent<Collider2D>().offset, Quaternion.identity);
+            r.fireInstance.transform.parent = r.transform;
+        }
     }
 
     // Update is called once per frame
