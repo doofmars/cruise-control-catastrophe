@@ -5,6 +5,7 @@ using UnityEngine;
 public class HealthBar : MonoBehaviour
 {
     public Transform bar;
+    private SpriteRenderer barSprite;
     private Vector3 vector3 = new Vector3(1f, 1f);
 
     public bool hideWhenFull = true;
@@ -41,13 +42,15 @@ public class HealthBar : MonoBehaviour
     private void Start()
     {
         currentHealth = startingHealth;
+        barSprite = transform.GetChild(2).GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
         transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = visible;
         transform.GetChild(1).GetComponent<SpriteRenderer>().enabled = visible;
-        transform.GetChild(2).GetChild(0).GetComponent<SpriteRenderer>().enabled = visible;
+        barSprite.enabled = visible;
+        barSprite.color = new Color(1 - currentHealth / maxHealth, currentHealth / maxHealth, 0f);
     }
 
     public bool IsFull()
