@@ -11,6 +11,7 @@ public class HealthBar : MonoBehaviour
     private bool visible = true;
 
     public float maxHealth = 100f;
+    public float startingHealth = 100f;
     private float _currentHealth = 0f;
     public float currentHealth
     {
@@ -39,7 +40,7 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = startingHealth;
     }
 
     private void Update()
