@@ -706,6 +706,28 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 707517426093974980, guid: a8ee020af71173140ab58165f15d72b0,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: acd4f8a662e66af46a67a0c4cc615ffb,
+        type: 3}
+    - target: {fileID: 707517426093974980, guid: a8ee020af71173140ab58165f15d72b0,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Victory Progress:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 707517426093974981, guid: a8ee020af71173140ab58165f15d72b0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -6.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 707517426166261618, guid: a8ee020af71173140ab58165f15d72b0,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: acd4f8a662e66af46a67a0c4cc615ffb,
+        type: 3}
     - target: {fileID: 707517427185254081, guid: a8ee020af71173140ab58165f15d72b0,
         type: 3}
       propertyPath: m_Name
@@ -1027,6 +1049,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 381489388}
     m_Modifications:
+    - target: {fileID: 990146810516536894, guid: ee5eaa71ca36e0346b33ffce6db33c63,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: acd4f8a662e66af46a67a0c4cc615ffb,
+        type: 3}
     - target: {fileID: 990146811677052744, guid: ee5eaa71ca36e0346b33ffce6db33c63,
         type: 3}
       propertyPath: m_LocalPosition.x
