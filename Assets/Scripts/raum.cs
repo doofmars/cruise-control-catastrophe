@@ -6,13 +6,14 @@ using UnityEngine.UI;
 public class raum : MonoBehaviour
 {
 
-    public Text currentRoomIndicatorText;
+    private Text currentRoomIndicatorText;
     public string roomname;
+    public References references;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        currentRoomIndicatorText = references.currentRoomIndicator;
     }
 
     // Update is called once per frame

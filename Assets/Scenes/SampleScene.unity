@@ -587,6 +587,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2088192142219936951, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: currentRoomIndicatorText
+      value: 
+      objectReference: {fileID: 1357431707}
+    - target: {fileID: 3192540755662537162, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: currentRoomIndicatorText
+      value: 
+      objectReference: {fileID: 1357431707}
     - target: {fileID: 3290019924030060283, guid: cc7f7f1a9484167489b2cee97978688f,
         type: 3}
       propertyPath: currentRoomIndicatorText
@@ -597,6 +607,58 @@ PrefabInstance:
       propertyPath: currentRoomIndicatorText
       value: 
       objectReference: {fileID: 1357431707}
+    - target: {fileID: 3290019924316765392, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: m_Tiles.Array.data[74].second.m_TileSpriteIndex
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290019924316765392, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[16].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290019924316765392, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[16].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290019924316765392, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[23].m_RefCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290019924316765392, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[23].m_Data
+      value: 
+      objectReference: {fileID: -7930702051008364624, guid: 3dc234724e557cc4b854c08588d71dd3,
+        type: 3}
+    - target: {fileID: 3290019924316765392, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: m_Tiles.Array.data[78].second.m_TileSpriteIndex
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290019924316765392, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[18].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290019924316765392, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[18].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290019924316765392, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[25].m_RefCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3290019924316765392, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[25].m_Data
+      value: 
+      objectReference: {fileID: -5294335864591787371, guid: 3dc234724e557cc4b854c08588d71dd3,
+        type: 3}
     - target: {fileID: 3290019924902629736, guid: cc7f7f1a9484167489b2cee97978688f,
         type: 3}
       propertyPath: currentRoomIndicatorText
@@ -667,5 +729,15 @@ PrefabInstance:
       propertyPath: currentRoomIndicatorText
       value: 
       objectReference: {fileID: 1357431707}
+    - target: {fileID: 4185134135444574089, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: currentRoomIndicatorText
+      value: 
+      objectReference: {fileID: 1357431707}
+    - target: {fileID: 4250338473582989004, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
