@@ -6,7 +6,6 @@ public class DamagedComponent : MonoBehaviour
 {
     [SerializeField] public HealthBar healthBar;
     private SpriteRenderer spriteRenderer;
-    public Sprite deadSprite;
     private Room parent;
     public float maxHealth = 100f;
     public float repairRate = 20f;
@@ -19,6 +18,7 @@ public class DamagedComponent : MonoBehaviour
     {
         healthBar.maxHealth = maxHealth;
         parent = transform.GetComponentInParent<Room>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -32,8 +32,7 @@ public class DamagedComponent : MonoBehaviour
         if (healthBar.currentHealth <= 0f && !broken)
         {
             broken = true;
-            spriteRenderer.sprite = deadSprite;
-            spriteRenderer.UpdateGIMaterials();
+            spriteRenderer.sprite = Resources.Load<Sprite>("Sprites/Dot_02_broken");
         }
         if (!healthBar.IsFull() && !broken && repairPersonnel > 0)
         {
