@@ -17,6 +17,9 @@ Sound effects:
 
 	wrench 02.wav by Anthousai
 	https://freesound.org/people/Anthousai/sounds/399011/
+	
+	Energy Blast by Kinoton
+	https://freesound.org/people/Kinoton/sounds/369516/
 
 Graphics:
 
