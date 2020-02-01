@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Raum : MonoBehaviour
+public class RoomMeta : MonoBehaviour
 {
 
     private Text currentRoomIndicatorText;

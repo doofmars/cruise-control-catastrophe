@@ -10,17 +10,22 @@ public class Firestarter : MonoBehaviour
     public GameObject firePrefab;
 
     private float timer = 0.0f;
-    private object[] rooms;
+    private GameObject[] rooms;
 
     // Start is called before the first frame update
     void Start()
     {
-        rooms = FindObjectsOfType(typeof(Room));
+        if (firePrefab == null)
+        {
+            Debug.LogError("Warning, fire prefab not defined in Firestarter");
+        }
+        rooms = GameObject.FindGameObjectsWithTag("Room");
         Debug.Log(rooms.Length);
 
         for(int i = 0; i < rooms.Length; i++)
         {
-            Room r = ((Room)rooms[i]);
+            rooms[i].AddComponent<Room>();
+            Room r = ((Room)rooms[i].GetComponent("Room"));
             r.fireInstance = Instantiate(firePrefab, r.transform.position, Quaternion.identity);
             r.fireInstance.transform.parent = r.transform;
         }
@@ -42,10 +47,10 @@ public class Firestarter : MonoBehaviour
             {
                 //Burn a room
                 int roomNumber = Random.Range(0, rooms.Length);
-                if (!((Room)rooms[roomNumber]).isOnFire)
+                if (!(rooms[roomNumber].GetComponent("Room") as Room).isOnFire)
                 {
-                    Debug.Log("fire in room " + roomNumber);
-                    ((Room)rooms[roomNumber]).isOnFire = true;
+                    //Debug.Log("fire in room " + (rooms[roomNumber].GetComponent("RoomMeta") as RoomMeta).roomname);
+                    (rooms[roomNumber].GetComponent("Room") as Room).isOnFire = true;
                 }
             }
         }

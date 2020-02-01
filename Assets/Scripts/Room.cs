@@ -8,11 +8,6 @@ public class Room : MonoBehaviour
 
     public GameObject fireInstance;
 
-    private void Start()
-    {
-    }
-
-
     // Update is called once per frame
     void Update()
     {
