@@ -1,11 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class References : MonoBehaviour
+public class GoalProgress : MonoBehaviour
 {
-    public Text currentRoomIndicator;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +14,15 @@ public class References : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        //Debug.Log("Stay bridge");
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Enter bridge");
     }
 }
