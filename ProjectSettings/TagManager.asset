@@ -9,6 +9,7 @@ TagManager:
   - myText
   - ShipHealth
   - Music
+  - Machine
   layers:
   - Default
   - TransparentFX
