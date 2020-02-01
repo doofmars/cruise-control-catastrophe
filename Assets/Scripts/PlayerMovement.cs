@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     bool sprinting = false;
     public HealthBar sprintbar;
     public float sprintBarDecay = 1f;
+    public float sprintingSpeedBonusFactor = 1.5f;
 
     public float runSpeed = 20.0f;
 
@@ -21,9 +22,13 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // Gives a value between -1 and 1
-        horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
-        vertical = Input.GetAxisRaw("Vertical"); // -1 is down
-        sprinting = Input.GetKey(KeyCode.Space);
+        sprinting = Input.GetKey(KeyCode.Space) && sprintbar.currentHealth!=0;
+        if (!sprinting)
+        {
+            horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
+            vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+        }
+        
     }
 
     void FixedUpdate()
@@ -38,6 +43,13 @@ public class PlayerMovement : MonoBehaviour
             vertical *= moveLimiter;
         }
 
-        body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        if (sprinting)
+        {
+            body.velocity = new Vector2(horizontal * runSpeed * sprintingSpeedBonusFactor, vertical * runSpeed * sprintingSpeedBonusFactor);
+        }
+        else
+        {
+            body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        }
     }
 }

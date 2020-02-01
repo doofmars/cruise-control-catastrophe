@@ -112,8 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b208a581305f1d3489388995a6559ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 100
-  waitTime: 2
+  fireRate: 50
+  waitTime: 5
   firePrefab: {fileID: 6150979372907069135, guid: e0a1a005ae7875a4ab71063497a3a6a6,
     type: 3}
   layoutManager: {fileID: 0}
