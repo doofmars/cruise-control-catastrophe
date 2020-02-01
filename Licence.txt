@@ -1,0 +1,16 @@
+Sound effects:
+
+	Explosion_01.wav by tommccann
+	https://freesound.org/people/tommccann/sounds/235968/
+
+	fire2.wav by tc630
+	https://freesound.org/people/tc630/sounds/47835/
+
+	Explosion by Iwiploppenisse (CC BY 3.0)
+	https://freesound.org/people/Iwiploppenisse/sounds/156031/
+
+	Scifi Alarm x3.wav by Cell31_Sound_Productions (CC BY 3.0)
+	https://freesound.org/people/Cell31_Sound_Productions/sounds/388824/
+
+	Deflector Shield by Metzik  (CC BY 3.0)
+	https://freesound.org/people/Metzik/sounds/459782/
