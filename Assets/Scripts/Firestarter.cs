@@ -26,21 +26,25 @@ public class Firestarter : MonoBehaviour
         {
             rooms[i].AddComponent<Room>();
             Room r = ((Room)rooms[i].GetComponent("Room"));
+
+            r.fireInstance = Instantiate(firePrefab);
+            r.fireInstance.transform.parent = r.transform;
+            
+            PolygonCollider2D roomCollider = r.GetComponent<PolygonCollider2D>();
             while (true)
             {
-                Bounds bounds = firePrefab.GetComponent<Collider2D>().bounds;
-                PolygonCollider2D roomCollider = (PolygonCollider2D)r.GetComponent<Collider2D>();
+                Vector3 extents = r.fireInstance.GetComponent<Collider2D>().bounds.extents;
+                Vector2 extents2D = new Vector2(extents.x, extents.y);
                 Vector2 minPointForFire = getRandomPointInBounds(roomCollider);
-                Vector2 maxPointForFire = minPointForFire + new Vector2(bounds.extents.x, bounds.extents.y);
+                Vector2 maxPointForFire = minPointForFire + 2*extents2D;
                 if (roomCollider.OverlapPoint(maxPointForFire))
                 {
-                    r.fireInstance = Instantiate(firePrefab, minPointForFire, Quaternion.identity);
-                    r.fireInstance.transform.parent = r.transform;
+                    r.fireInstance.transform.position = minPointForFire + extents2D;
                     break;
                 }
             }
 
-            
+
         }
     }
 
