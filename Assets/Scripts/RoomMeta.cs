@@ -25,6 +25,7 @@ public class RoomMeta : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         currentRoomIndicatorText.text = roomname;
+        Debug.Log("entering" + roomname);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
