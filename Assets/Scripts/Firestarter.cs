@@ -21,7 +21,7 @@ public class Firestarter : MonoBehaviour
         for(int i = 0; i < rooms.Length; i++)
         {
             Room r = ((Room)rooms[i]);
-            r.fireInstance = Instantiate(firePrefab, r.GetComponent<Collider2D>().offset, Quaternion.identity);
+            r.fireInstance = Instantiate(firePrefab, r.transform.position, Quaternion.identity);
             r.fireInstance.transform.parent = r.transform;
         }
     }
