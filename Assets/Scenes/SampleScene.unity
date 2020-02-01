@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprintbar: {fileID: 836014099}
-  sprintBarDecay: 1
+  sprintBarDecay: 3
   runSpeed: 2
 --- !u!58 &343704900
 CircleCollider2D:
@@ -868,6 +868,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -193.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8080024087619221085, guid: a8ee020af71173140ab58165f15d72b0,
+        type: 3}
+      propertyPath: sprintbar
+      value: 
+      objectReference: {fileID: 836014099}
     - target: {fileID: 5235756916719416169, guid: a8ee020af71173140ab58165f15d72b0,
         type: 3}
       propertyPath: m_Color.r
@@ -1484,5 +1489,10 @@ PrefabInstance:
       propertyPath: layoutManager
       value: 
       objectReference: {fileID: 3290019924157816928}
+    - target: {fileID: 8848433733415866045, guid: 7f02688de05b5b94f949af750a3ff7b8,
+        type: 3}
+      propertyPath: fireRate
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f02688de05b5b94f949af750a3ff7b8, type: 3}
