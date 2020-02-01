@@ -49,7 +49,7 @@ public class Firestarter : MonoBehaviour
                 int roomNumber = Random.Range(0, rooms.Length);
                 if (!(rooms[roomNumber].GetComponent("Room") as Room).isOnFire)
                 {
-                    Debug.Log("fire in room " + roomNumber);
+                    //Debug.Log("fire in room " + (rooms[roomNumber].GetComponent("RoomMeta") as RoomMeta).roomname);
                     (rooms[roomNumber].GetComponent("Room") as Room).isOnFire = true;
                 }
             }
