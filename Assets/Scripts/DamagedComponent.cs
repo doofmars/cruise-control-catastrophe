@@ -5,14 +5,14 @@ using UnityEngine;
 public class DamagedComponent : MonoBehaviour
 {
     [SerializeField] public HealthBar healthBar;
-    public float currentHealth = 20f;
-
     public float maxHealth = 100f;
+    public float repairRate = 20f;
 
     // Start is called before the first frame update
     void Start()
     {
-        healthBar.SetValue(currentHealth / maxHealth);
+        healthBar.maxHealth = maxHealth;
+        healthBar.currentHealth = 20f;
     }
 
     // Update is called once per frame
@@ -37,10 +37,9 @@ public class DamagedComponent : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (currentHealth < maxHealth) { 
+        if (!healthBar.IsFull()) { 
             float timer = Time.deltaTime;
-            currentHealth += timer * 20f;
-            healthBar.SetValue(currentHealth / maxHealth);
+            healthBar.currentHealth += timer * repairRate;
         }
     }
 }
