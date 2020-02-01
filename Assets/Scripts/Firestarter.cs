@@ -26,8 +26,21 @@ public class Firestarter : MonoBehaviour
         {
             rooms[i].AddComponent<Room>();
             Room r = ((Room)rooms[i].GetComponent("Room"));
-            r.fireInstance = Instantiate(firePrefab, r.transform.position, Quaternion.identity);
-            r.fireInstance.transform.parent = r.transform;
+            while (true)
+            {
+                Bounds bounds = firePrefab.GetComponent<Collider2D>().bounds;
+                PolygonCollider2D roomCollider = (PolygonCollider2D)r.GetComponent<Collider2D>();
+                Vector2 minPointForFire = getRandomPointInBounds(roomCollider);
+                Vector2 maxPointForFire = minPointForFire + new Vector2(bounds.extents.x, bounds.extents.y);
+                if (roomCollider.OverlapPoint(maxPointForFire))
+                {
+                    r.fireInstance = Instantiate(firePrefab, minPointForFire, Quaternion.identity);
+                    r.fireInstance.transform.parent = r.transform;
+                    break;
+                }
+            }
+
+            
         }
     }
 
@@ -55,4 +68,23 @@ public class Firestarter : MonoBehaviour
             }
         }
     }
+    private Vector2 getRandomPointInBounds(PolygonCollider2D polygonCollider2D)
+    {
+        Vector3 min = polygonCollider2D.bounds.min;
+        Vector3 max = polygonCollider2D.bounds.max;
+
+        while(true)
+        {
+            float pointMinX = Random.Range(min.x, max.x);
+            float pointMinY = Random.Range(min.y, max.y);
+            Vector2 pointMin = new Vector2(pointMinX, pointMinY);
+
+            if (polygonCollider2D.OverlapPoint(pointMin))
+            {
+                return pointMin;
+            }
+        }
+        return new Vector2(0, 0);
+    }
+
 }
