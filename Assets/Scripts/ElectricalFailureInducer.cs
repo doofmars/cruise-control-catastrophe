@@ -11,11 +11,13 @@ public class ElectricalFailureInducer : MonoBehaviour
 
     private float timer = 0.0f;
     private DamagedComponent[] components;
+    private AudioSource _sparkSFX;
     // Start is called before the first frame update
     void Start()
     {
         components = layoutManager.GetMachines();
         Debug.Log("MachineCount: " + components.Length);
+        _sparkSFX = GetComponents<AudioSource>()[1];
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class ElectricalFailureInducer : MonoBehaviour
                 {
                     var machine = components[machineIndex];
                     machine.healthBar.currentHealth -= machine.healthBar.maxHealth * 0.2f;
+                    _sparkSFX.Play();
                     Debug.Log("Machine " + machine.name + " had an electrical failure.");
                 }
             }

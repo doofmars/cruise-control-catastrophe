@@ -24,6 +24,6 @@ public class ShipDamageBar : MonoBehaviour
 
     private void loseGame()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Lose");
     }
 }

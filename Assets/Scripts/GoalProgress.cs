@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GoalProgress : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class GoalProgress : MonoBehaviour
             if (engine3.healthBar.currentHealth == 0) numberOfBrokenEngines++;
             float ratioOfIntactEngines = (3-numberOfBrokenEngines) / 3.0f;
             victoryProgress.currentHealth += progressRate * ratioOfIntactEngines;
+            if (victoryProgress.currentHealth >= victoryProgress.maxHealth)
+                SceneManager.LoadScene("Win");
         }
     }
 
