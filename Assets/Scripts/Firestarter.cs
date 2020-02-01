@@ -10,8 +10,6 @@ public class Firestarter : MonoBehaviour
     public GameObject firePrefab;
 
     private float timer = 0.0f;
-    private float visualTime = 0.0f;
-    private long timeSinceLastFire = 0;
     private object[] rooms;
 
     // Start is called before the first frame update
@@ -37,8 +35,6 @@ public class Firestarter : MonoBehaviour
         // Subtracting two is more accurate over time than resetting to zero.
         if (timer > waitTime)
         {
-            visualTime = timer;
-
             // Remove the recorded 2 seconds.
             timer = timer - waitTime;
 
@@ -46,11 +42,12 @@ public class Firestarter : MonoBehaviour
             {
                 //Burn a room
                 int roomNumber = Random.Range(0, rooms.Length);
-                Debug.Log("fire in room " + roomNumber);
-                ((Room)rooms[roomNumber]).isOnFire = true;
+                if (!((Room)rooms[roomNumber]).isOnFire)
+                {
+                    Debug.Log("fire in room " + roomNumber);
+                    ((Room)rooms[roomNumber]).isOnFire = true;
+                }
             }
-
-            
         }
     }
 }
