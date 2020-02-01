@@ -239,6 +239,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f47aa6c9aaaad4ab5ad7aa25b3805c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprintbar: {fileID: 836014099}
+  sprintBarDecay: 1
   runSpeed: 2
 --- !u!58 &343704900
 CircleCollider2D:
@@ -524,6 +526,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &836014099 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7482131288148640185, guid: a8ee020af71173140ab58165f15d72b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1071081573}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 660a966fde1f7ef4987eda7334eeb956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &895129031 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6093859979262062862, guid: cc7f7f1a9484167489b2cee97978688f,
@@ -543,6 +557,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 404158124841067113, guid: a8ee020af71173140ab58165f15d72b0,
+        type: 3}
+      propertyPath: m_Name
+      value: SprintBar
+      objectReference: {fileID: 0}
     - target: {fileID: 707517426093974980, guid: a8ee020af71173140ab58165f15d72b0,
         type: 3}
       propertyPath: m_FontData.m_Font
