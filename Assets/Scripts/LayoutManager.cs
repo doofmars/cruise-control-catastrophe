@@ -28,4 +28,15 @@ public class LayoutManager : MonoBehaviour
         }
         return rooms.ToArray();
     }
+
+    public DamagedComponent[] GetMachines()
+    {
+        var gameObjects = GameObject.FindGameObjectsWithTag("Machine");
+        var machines = new List<DamagedComponent>();
+        foreach (GameObject gameObject in gameObjects)
+        {
+            machines.Add(gameObject.GetComponent<DamagedComponent>());
+        }
+        return machines.ToArray();
+    }
 }

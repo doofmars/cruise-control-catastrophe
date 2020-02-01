@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f47aa6c9aaaad4ab5ad7aa25b3805c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 2
+  runSpeed: 4
 --- !u!58 &343704900
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -724,6 +724,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 660a966fde1f7ef4987eda7334eeb956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1739801234 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9090998064663140683, guid: 7f02688de05b5b94f949af750a3ff7b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 6588779954356240265}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1739801236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739801234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 956c9a870d48199419de4606ab27357c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRate: 1
+  waitTime: 1
+  layoutManager: {fileID: 0}
 --- !u!114 &2044712314 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1573867393473186238, guid: cc7f7f1a9484167489b2cee97978688f,
@@ -1285,5 +1306,10 @@ PrefabInstance:
       propertyPath: fireRate
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8848433733415866045, guid: 7f02688de05b5b94f949af750a3ff7b8,
+        type: 3}
+      propertyPath: layoutManager
+      value: 
+      objectReference: {fileID: 3290019924157816928}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f02688de05b5b94f949af750a3ff7b8, type: 3}
