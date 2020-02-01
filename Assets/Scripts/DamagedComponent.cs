@@ -8,12 +8,12 @@ public class DamagedComponent : MonoBehaviour
     private Room parent;
     public float maxHealth = 100f;
     public float repairRate = 20f;
+    public float maxOperatingTemperature = 400f;
 
     // Start is called before the first frame update
     void Start()
     {
         healthBar.maxHealth = maxHealth;
-        healthBar.currentHealth = 20f;
         parent = transform.GetComponentInParent<Room>();
         Debug.Log("Found parent " + parent.name);
     }
@@ -21,12 +21,15 @@ public class DamagedComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (parent.temperature > maxOperatingTemperature)
+        {
+            var time = Time.deltaTime;
+            healthBar.currentHealth -= time * 0.05f * maxHealth;
+        }
     }
 
     void UpdateFixed()
     {
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

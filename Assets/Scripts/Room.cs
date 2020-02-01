@@ -34,7 +34,7 @@ public class Room : MonoBehaviour
             temperature += time * 15f;
         } else
         {
-            temperature -= 0.02f * (temperature - 290f) * time;
+            temperature -= 0.1f * (temperature - 290f) * time;
         }
     }
 
