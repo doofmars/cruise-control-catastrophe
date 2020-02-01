@@ -1999,7 +1999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84647b2437056b94f954af9e550c0f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomname: Storage
+  roomname: Shield
   references: {fileID: 2012477597065840462}
 --- !u!1 &7979957981820295177
 GameObject:

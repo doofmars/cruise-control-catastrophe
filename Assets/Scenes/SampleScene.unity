@@ -587,6 +587,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2012477597065840462, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: currentRoomIndicator
+      value: 
+      objectReference: {fileID: 1357431707}
     - target: {fileID: 2088192142219936951, guid: cc7f7f1a9484167489b2cee97978688f,
         type: 3}
       propertyPath: currentRoomIndicatorText
