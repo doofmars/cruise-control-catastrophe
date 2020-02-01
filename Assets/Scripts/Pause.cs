@@ -5,10 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
-
-    public GameObject Canvas;
-    bool Paused;
-
     // Start is called before the first frame update
     void Start()
     {
