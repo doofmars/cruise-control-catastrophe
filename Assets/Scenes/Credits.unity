@@ -656,7 +656,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Cruise Control Catastrophe\r\n\r\nA Game made in 48 hours during the \nGlobal
-    Game Jam 2020 @Tradebyte\n Ansbach, Germany\r\n\r\nProudly made by\r\n\r\n-\r\n-\r\n-\r\n-\r\n-\r\n-"
+    Game Jam 2020 @Tradebyte\n Ansbach, Germany\r\n\r\nProudly made by\r\n\r\nAbenteurlich\naeolus3001\nAplusKminus\ndoofmars\nTheofrastus\nvlancer"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc24da462abd48d45b992fa9f459e4bd, type: 2}
   m_sharedMaterial: {fileID: -233775850944260544, guid: dc24da462abd48d45b992fa9f459e4bd,
@@ -726,7 +726,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -58.221863}
   m_textInfo:
     textComponent: {fileID: 1814891762}
-    characterCount: 154
+    characterCount: 202
     spriteCount: 0
     spaceCount: 31
     wordCount: 27
