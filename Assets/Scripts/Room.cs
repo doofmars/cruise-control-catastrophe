@@ -33,4 +33,17 @@ public class Room : MonoBehaviour
             temperature -= 0.1f * (temperature - 290f) * time;
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Asteroid"))
+        {
+            var asteroid = collision.gameObject.GetComponent<Asteroid>();
+            if (layoutManager.shieldGenerator.energyBar.currentEnergy <= 0f && asteroid.CanCollide())
+            {
+                isOnFire = true;
+                asteroid.Deactivate();
+            }
+        }
+    }
 }
