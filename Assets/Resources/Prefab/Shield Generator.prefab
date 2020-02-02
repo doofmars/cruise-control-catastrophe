@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8313894952852227719}
   - component: {fileID: 8313894952852227723}
   - component: {fileID: 1574165871505225526}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Shield Generator
   m_TagString: Machine
   m_Icon: {fileID: 0}
@@ -33,7 +33,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children:
   - {fileID: 5970096676614806762}
-  - {fileID: 5257286163353297692}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -147,98 +146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0e80faea175e97468293f8ac2c81085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyBar: {fileID: 6542744140188420786}
+  energyBar: {fileID: 0}
   machine: {fileID: 8313894952852227723}
   maxEnergy: 200
   manualChargeRate: 80
   automaticChargeRate: 5
---- !u!1001 &3079235669182179405
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 8313894952852227720}
-    m_Modifications:
-    - target: {fileID: 7083605240757291857, guid: dff81b6c641008142a90326fa534dfa9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7083605240757291857, guid: dff81b6c641008142a90326fa534dfa9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7083605240757291857, guid: dff81b6c641008142a90326fa534dfa9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7083605240757291857, guid: dff81b6c641008142a90326fa534dfa9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7083605240757291857, guid: dff81b6c641008142a90326fa534dfa9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7083605240757291857, guid: dff81b6c641008142a90326fa534dfa9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 7083605240757291857, guid: dff81b6c641008142a90326fa534dfa9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 7083605240757291857, guid: dff81b6c641008142a90326fa534dfa9,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7083605240757291857, guid: dff81b6c641008142a90326fa534dfa9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7083605240757291857, guid: dff81b6c641008142a90326fa534dfa9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7083605240757291857, guid: dff81b6c641008142a90326fa534dfa9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 7083605240757291859, guid: dff81b6c641008142a90326fa534dfa9,
-        type: 3}
-      propertyPath: m_Name
-      value: EnergyBar
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: dff81b6c641008142a90326fa534dfa9, type: 3}
---- !u!4 &5257286163353297692 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7083605240757291857, guid: dff81b6c641008142a90326fa534dfa9,
-    type: 3}
-  m_PrefabInstance: {fileID: 3079235669182179405}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6542744140188420786 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8104187567959958271, guid: dff81b6c641008142a90326fa534dfa9,
-    type: 3}
-  m_PrefabInstance: {fileID: 3079235669182179405}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 484128291c5c4344ba8546723a0b9031, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3500438360239019963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -310,11 +222,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HealthBar
-      objectReference: {fileID: 0}
-    - target: {fileID: 7083605240757291859, guid: 20ebb5d0136e8ec4b9162737c1913955,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7083605241156461935, guid: 20ebb5d0136e8ec4b9162737c1913955,
         type: 3}

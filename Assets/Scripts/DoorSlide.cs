@@ -81,6 +81,7 @@ public class DoorSlide : MonoBehaviour
             doorLockRequest = false;
             doorLocked = true;
         }
+        movingVector = transform.rotation * movingVector;
         foreach (Transform child in transform)
         {
             if (child.name == "Bottom")
