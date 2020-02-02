@@ -6,11 +6,12 @@ public class Shield : MonoBehaviour
 {
 
     public ShieldGenerator shieldGenerator;
+    private AudioSource _shieldSfx;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _shieldSfx = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +28,7 @@ public class Shield : MonoBehaviour
             if (asteroid.CanCollide())
             {
                 shieldGenerator.DrainShield(asteroid.GetComponent<Rigidbody2D>().mass);
+                _shieldSfx.Play();
                 asteroid.Deactivate();
             }
         }
