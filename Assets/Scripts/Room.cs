@@ -10,9 +10,11 @@ public class Room : MonoBehaviour
     public LayoutManager layoutManager;
 
     public float temperature = 290f;
+    private AudioSource _explosion;
 
     void Start()
     {
+        _explosion = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class Room : MonoBehaviour
             if (layoutManager.shieldGenerator.energyBar.currentEnergy <= 0f && asteroid.CanCollide())
             {
                 isOnFire = true;
+                _explosion.Play();
                 asteroid.Deactivate();
             }
         }

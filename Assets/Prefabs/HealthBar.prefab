@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7083605240757291857}
   - component: {fileID: 7083605240757291856}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,6 +78,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 7083605240353709435}
+  hideWhenFull: 1
+  hideWhenEmpty: 1
+  maxHealth: 100
+  startingHealth: 100
 --- !u!1 &7083605241156461935
 GameObject:
   m_ObjectHideFlags: 0
