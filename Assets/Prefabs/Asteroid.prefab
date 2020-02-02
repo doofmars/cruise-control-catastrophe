@@ -133,4 +133,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f1f743d08c4dc1499e5061da9d5198e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  continuousImpactProbabiltiy: 0.007
+  continuousImpactProbabiltiy: 0.012

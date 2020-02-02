@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 956c9a870d48199419de4606ab27357c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 80
+  fireRate: 3
   waitTime: 1
   layoutManager: {fileID: 0}
 --- !u!114 &1659317669992342701
@@ -148,8 +148,8 @@ MonoBehaviour:
   asteroidPrefab: {fileID: 5391055124083557087, guid: feb665ec329ebc94aa8fbbf358ae7454,
     type: 3}
   camera: {fileID: 0}
-  fireRate: 60
-  waitTime: 7
+  fireRate: 70
+  waitTime: 2
 --- !u!82 &200375065416360653
 AudioSource:
   m_ObjectHideFlags: 0

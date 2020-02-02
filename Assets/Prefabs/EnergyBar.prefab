@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 484128291c5c4344ba8546723a0b9031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bar: {fileID: 0}
+  bar: {fileID: 7083605240353709435}
   maxEnergy: 100
   startingEnergy: 100
 --- !u!1 &7083605241156461935
