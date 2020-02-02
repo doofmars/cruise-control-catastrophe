@@ -11,6 +11,7 @@ public class Room : MonoBehaviour
 
     public float temperature = 290f;
     private AudioSource _explosion;
+    public GameObject explosionprefab;
 
     void Start()
     {
@@ -45,6 +46,10 @@ public class Room : MonoBehaviour
             {
                 isOnFire = true;
                 _explosion.Play();
+                var asteroidposition = asteroid.gameObject.transform.position;
+                var explosion = Instantiate(explosionprefab);
+                explosion.transform.position = asteroidposition;
+                Destroy(explosion, 0.5f);
                 asteroid.Deactivate();
             }
         }

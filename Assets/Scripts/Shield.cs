@@ -7,6 +7,7 @@ public class Shield : MonoBehaviour
 
     public ShieldGenerator shieldGenerator;
     private AudioSource _shieldSfx;
+    public GameObject shieldHitPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,10 @@ public class Shield : MonoBehaviour
             {
                 shieldGenerator.DrainShield(asteroid.GetComponent<Rigidbody2D>().mass);
                 _shieldSfx.Play();
+                var asteroidposition = asteroid.gameObject.transform.position;
+                var shieldHit = Instantiate(shieldHitPrefab);
+                shieldHit.transform.position = asteroidposition;
+                Destroy(shieldHit, 0.5f);
                 asteroid.Deactivate();
             }
         }
