@@ -516,6 +516,12 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 404158123642017661, guid: a8ee020af71173140ab58165f15d72b0,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: acd4f8a662e66af46a67a0c4cc615ffb,
+        type: 3}
     - target: {fileID: 404158124841067113, guid: a8ee020af71173140ab58165f15d72b0,
         type: 3}
       propertyPath: m_Name
@@ -733,6 +739,12 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5235756916719416169, guid: a8ee020af71173140ab58165f15d72b0,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: acd4f8a662e66af46a67a0c4cc615ffb,
+        type: 3}
     - target: {fileID: 7482131288148640185, guid: a8ee020af71173140ab58165f15d72b0,
         type: 3}
       propertyPath: maxHealth
