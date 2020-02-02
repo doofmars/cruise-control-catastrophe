@@ -721,10 +721,10 @@ MonoBehaviour:
   m_Texture: {fileID: 2800000, guid: e404b8667b389384da1ea6a6b101dadb, type: 3}
   m_UVRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.02
+    y: -0.66
+    width: 0.97
+    height: 1.62
 --- !u!222 &874881767
 CanvasRenderer:
   m_ObjectHideFlags: 0
