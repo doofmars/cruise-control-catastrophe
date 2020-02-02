@@ -11,7 +11,6 @@ public class HealthBar : MonoBehaviour
     private bool visible = true;
 
     public float maxHealth = 100f;
-    public float startingHealth = 100f;
     private float _currentHealth = 0f;
     public float currentHealth
     {

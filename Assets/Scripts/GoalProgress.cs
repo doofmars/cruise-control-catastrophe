@@ -14,7 +14,7 @@ public class GoalProgress : MonoBehaviour
     private int playersInsideRoom = 0;
     void Start()
     {
-
+        victoryProgress.currentHealth = 0f;
     }
 
     private void FixedUpdate()
