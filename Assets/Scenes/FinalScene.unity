@@ -368,6 +368,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3448970279874768, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
+      propertyPath: explosionprefab
+      value: 
+      objectReference: {fileID: 308442190412874247, guid: 751cbfa6a93ae2247994a6add96c65cd,
+        type: 3}
+    - target: {fileID: 3448970279874770, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
+      propertyPath: explosionprefab
+      value: 
+      objectReference: {fileID: 308442190412874247, guid: 751cbfa6a93ae2247994a6add96c65cd,
+        type: 3}
+    - target: {fileID: 3448970279874771, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
+      propertyPath: explosionprefab
+      value: 
+      objectReference: {fileID: 308442190412874247, guid: 751cbfa6a93ae2247994a6add96c65cd,
+        type: 3}
     - target: {fileID: 3448970279874772, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
       propertyPath: uiManager
       value: 
@@ -376,10 +391,30 @@ PrefabInstance:
       propertyPath: shieldGenerator
       value: 
       objectReference: {fileID: 111521566}
+    - target: {fileID: 3448970279874773, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
+      propertyPath: explosionprefab
+      value: 
+      objectReference: {fileID: 308442190412874247, guid: 751cbfa6a93ae2247994a6add96c65cd,
+        type: 3}
+    - target: {fileID: 3448970279874774, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
+      propertyPath: explosionprefab
+      value: 
+      objectReference: {fileID: 308442190412874247, guid: 751cbfa6a93ae2247994a6add96c65cd,
+        type: 3}
+    - target: {fileID: 3448970279874775, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
+      propertyPath: explosionprefab
+      value: 
+      objectReference: {fileID: 308442190412874247, guid: 751cbfa6a93ae2247994a6add96c65cd,
+        type: 3}
     - target: {fileID: 3448970279874780, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
       propertyPath: layoutManager
       value: 
       objectReference: {fileID: 1757380453}
+    - target: {fileID: 3448970279874780, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
+      propertyPath: explosionprefab
+      value: 
+      objectReference: {fileID: 308442190412874247, guid: 751cbfa6a93ae2247994a6add96c65cd,
+        type: 3}
     - target: {fileID: 515314147063014628, guid: cc7f7f1a9484167489b2cee97978688f,
         type: 3}
       propertyPath: m_Layer

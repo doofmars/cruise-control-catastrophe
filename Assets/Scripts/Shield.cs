@@ -29,6 +29,7 @@ public class Shield : MonoBehaviour
             {
                 shieldGenerator.DrainShield(asteroid.GetComponent<Rigidbody2D>().mass);
                 _shieldSfx.Play();
+                var asteroidposition = asteroid.gameObject.transform.position;
                 asteroid.Deactivate();
             }
         }
