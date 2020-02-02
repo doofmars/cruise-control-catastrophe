@@ -22,12 +22,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // Gives a value between -1 and 1
-        sprinting = Input.GetKey(KeyCode.Space) && sprintbar.currentHealth!=0;
-        if (!sprinting)
-        {
-            horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
-            vertical = Input.GetAxisRaw("Vertical"); // -1 is down
-        }
+        sprinting = Input.GetKey(KeyCode.Space) && sprintbar.currentHealth*10>sprintbar.maxHealth;
+           horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
+           vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+        
         
     }
 
