@@ -391,6 +391,10 @@ PrefabInstance:
       propertyPath: shieldGenerator
       value: 
       objectReference: {fileID: 111521566}
+    - target: {fileID: 3448970279874772, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
+      propertyPath: fireStarter
+      value: 
+      objectReference: {fileID: 6588779954356240266}
     - target: {fileID: 3448970279874773, guid: cc7f7f1a9484167489b2cee97978688f, type: 3}
       propertyPath: explosionprefab
       value: 
@@ -17045,8 +17049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldGenerator: {fileID: 111521566}
-  shieldHitPrefab: {fileID: 1272421808147363220, guid: b4cd6aa3d05c66b4d9957cacd8faa907,
-    type: 3}
+  shieldHitPrefab: {fileID: 0}
 --- !u!70 &1549738725
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -17642,6 +17645,12 @@ PrefabInstance:
       propertyPath: layoutManager
       value: 
       objectReference: {fileID: 1757380453}
+    - target: {fileID: 2519791380142179205, guid: 7f02688de05b5b94f949af750a3ff7b8,
+        type: 3}
+      propertyPath: firePrefab
+      value: 
+      objectReference: {fileID: 5571791691168429581, guid: e0a1a005ae7875a4ab71063497a3a6a6,
+        type: 3}
     - target: {fileID: 4154369898664961377, guid: 7f02688de05b5b94f949af750a3ff7b8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17719,3 +17728,15 @@ PrefabInstance:
       objectReference: {fileID: 1757380453}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f02688de05b5b94f949af750a3ff7b8, type: 3}
+--- !u!114 &6588779954356240266 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2519791380142179205, guid: 7f02688de05b5b94f949af750a3ff7b8,
+    type: 3}
+  m_PrefabInstance: {fileID: 6588779954356240265}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739801234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b208a581305f1d3489388995a6559ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
