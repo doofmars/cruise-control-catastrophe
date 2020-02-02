@@ -6,8 +6,6 @@ public class EnergyBar : MonoBehaviour
 {
     public Transform bar;
     private Vector3 vector3 = new Vector3(1f, 1f);
-    private AudioSource _shieldsfx;
-    private bool _shielddown = false;
 
     public float maxEnergy = 100f;
     public float startingEnergy = 100f;
@@ -38,24 +36,6 @@ public class EnergyBar : MonoBehaviour
     private void Start()
     {
         currentEnergy = startingEnergy;
-        _shieldsfx = gameObject.GetComponent<AudioSource>();
-    }
-
-
-    private void FixedUpdate()
-    {
-        if (!_shielddown)
-        {
-            if (_currentEnergy <= 0.0f)
-            {
-                _shieldsfx.Play();
-                _shielddown = true;
-            }
-        }
-        if (_currentEnergy > 0.0f)
-            _shielddown = false;
-
-
     }
 
     public bool IsFull()
