@@ -33,17 +33,17 @@ public class Firestarter : MonoBehaviour
     {
         var fire = Instantiate(firePrefab.gameObject);
 
-        var fireCollider = fire.GetComponent<Collider2D>();
+        var fireCollider = fire.GetComponent<CircleCollider2D>();
         var roomCollider = room.gameObject.GetComponent<PolygonCollider2D>();
-        var maxAttempts = 10;
+        var maxAttempts = 20;
         var attempts = 0;
         while (attempts < maxAttempts)
         {
             Vector3 extents = fireCollider.bounds.extents;
-            Vector3 minPointForFire = getRandomPointInBounds(roomCollider);
+            Vector3 minPointForFire = getRandomPointInBounds(roomCollider, extents);
             fire.transform.position = minPointForFire;
-            if (roomCollider.bounds.Contains(minPointForFire - extents) &&
-                roomCollider.bounds.Contains(minPointForFire + extents))
+            if (roomCollider.OverlapPoint(minPointForFire - extents) &&
+                roomCollider.OverlapPoint(minPointForFire + extents))
             {
                 break;
             }
@@ -108,10 +108,10 @@ public class Firestarter : MonoBehaviour
                 _firePlayer.Stop();
         }
     }
-    private Vector3 getRandomPointInBounds(PolygonCollider2D polygonCollider2D)
+    private Vector3 getRandomPointInBounds(PolygonCollider2D polygonCollider2D, Vector3 offset)
     {
-        Vector3 min = polygonCollider2D.bounds.min;
-        Vector3 max = polygonCollider2D.bounds.max;
+        Vector3 min = polygonCollider2D.bounds.min + offset;
+        Vector3 max = polygonCollider2D.bounds.max - offset;
 
         while (true)
         {
