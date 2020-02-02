@@ -41,7 +41,6 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        currentHealth = startingHealth;
         barSprite = transform.GetChild(2).GetChild(0).GetComponent<SpriteRenderer>();
     }
 

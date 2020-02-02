@@ -3,15 +3,16 @@ using UnityEngine;
 
 public class ShipDamage : MonoBehaviour
 {
+    public LayoutManager layoutManager;
     // Start is called before the first frame update
-    private GameObject[] rooms;
+    private Room[] rooms;
     private int _roomsOnFire;
     private GameObject _shipHealthBar;
     public float firedamage;
     void Start()
     {
         _shipHealthBar = GameObject.FindGameObjectWithTag("ShipHealth");
-        rooms = GameObject.FindGameObjectsWithTag("Room");
+        rooms = layoutManager.GetRooms();
     }
 
     // Update is called once per frame
@@ -20,7 +21,7 @@ public class ShipDamage : MonoBehaviour
         _roomsOnFire = 0;
         for (int i = 0; i < rooms.Length; i++)
         {
-            if ((rooms[i].GetComponent("Room") as Room).isOnFire)
+            if (layoutManager.fireStarter.IsOnFire(rooms[i]))
             {
                 _roomsOnFire++;
             }

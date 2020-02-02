@@ -1,17 +1,20 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class Firestarter : MonoBehaviour
 {
     public int fireRate = 20;
     public float waitTime = 5.0f;
 
-    public GameObject firePrefab;
+    public Fire firePrefab;
     public LayoutManager layoutManager;
 
     private float timer = 0.0f;
     private Room[] rooms;
-    private bool fire;
+    private bool burning;
     private AudioSource _firePlayer;
+
+    private List<GameObject> fires = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -23,30 +26,40 @@ public class Firestarter : MonoBehaviour
         rooms = layoutManager.GetRooms();
         Debug.Log(rooms.Length);
 
-        for (int i = 0; i < rooms.Length; i++)
-        {
-            Room r = rooms[i];
-
-            r.fireInstance = Instantiate(firePrefab);
-            r.fireInstance.transform.parent = r.transform;
-
-            PolygonCollider2D roomCollider = r.gameObject.GetComponent<PolygonCollider2D>();
-            while (true)
-            {
-                Vector3 extents = r.fireInstance.GetComponent<Collider2D>().bounds.extents;
-                Vector2 extents2D = new Vector2(extents.x, extents.y);
-                Vector2 minPointForFire = getRandomPointInBounds(roomCollider);
-                Vector2 maxPointForFire = minPointForFire + 2 * extents2D;
-                if (roomCollider.OverlapPoint(maxPointForFire))
-                {
-                    r.fireInstance.transform.position = minPointForFire + extents2D;
-                    break;
-                }
-            }
-
-
-        }
         _firePlayer = gameObject.GetComponent<AudioSource>();
+    }
+
+    public void StartFireInRoom(Room room)
+    {
+        var fire = Instantiate(firePrefab.gameObject);
+
+        var fireCollider = fire.GetComponent<Collider2D>();
+        var roomCollider = room.gameObject.GetComponent<PolygonCollider2D>();
+        var maxAttempts = 10;
+        var attempts = 0;
+        while (attempts < maxAttempts)
+        {
+            Vector3 extents = fireCollider.bounds.extents;
+            Vector3 minPointForFire = getRandomPointInBounds(roomCollider);
+            fire.transform.position = minPointForFire;
+            if (roomCollider.bounds.Contains(minPointForFire - extents) &&
+                roomCollider.bounds.Contains(minPointForFire + extents))
+            {
+                break;
+            }
+            attempts++;
+        }
+        if (attempts == maxAttempts)
+        {
+            Debug.Log("Could not start fire in " + room.roomName + " within " + maxAttempts + " attempts.\n"
+                + "Bounds: " + fireCollider.bounds.min + fireCollider.bounds.max );
+            Destroy(fire);
+        }
+        else
+        {
+            fire.GetComponent<Fire>().room = room;
+            fires.Add(fire);
+        }
     }
 
     // Update is called once per frame
@@ -65,26 +78,26 @@ public class Firestarter : MonoBehaviour
             {
                 //Burn a room
                 int roomNumber = Random.Range(0, rooms.Length);
-                if (!(rooms[roomNumber].GetComponent("Room") as Room).isOnFire)
-                {
-                    //Debug.Log("fire in room " + (rooms[roomNumber].GetComponent("RoomMeta") as RoomMeta).roomname);
-                    (rooms[roomNumber].GetComponent("Room") as Room).isOnFire = true;
-                }
-
+                StartFireInRoom(rooms[roomNumber]);
             }
         }
 
-        fire = false;
-        for (int i = 0; i < rooms.Length; i++)
+        burning = false;
+        var extinguished = new List<GameObject>();
+        foreach (GameObject fire in fires)
         {
-            if ((rooms[i].GetComponent("Room") as Room).isOnFire)
+            if (fire.GetComponent<Fire>().extinguished)
             {
-                fire = true;
-                break;
+                extinguished.Add(fire);
             }
         }
+        foreach (GameObject fire in extinguished)
+        {
+            fires.Remove(fire);
+            Destroy(fire);
+        }
 
-        if (fire)
+        if (burning)
         {
             if (!_firePlayer.isPlaying)
                 _firePlayer.Play();
@@ -95,7 +108,7 @@ public class Firestarter : MonoBehaviour
                 _firePlayer.Stop();
         }
     }
-    private Vector2 getRandomPointInBounds(PolygonCollider2D polygonCollider2D)
+    private Vector3 getRandomPointInBounds(PolygonCollider2D polygonCollider2D)
     {
         Vector3 min = polygonCollider2D.bounds.min;
         Vector3 max = polygonCollider2D.bounds.max;
@@ -104,14 +117,25 @@ public class Firestarter : MonoBehaviour
         {
             float pointMinX = Random.Range(min.x, max.x);
             float pointMinY = Random.Range(min.y, max.y);
-            Vector2 pointMin = new Vector2(pointMinX, pointMinY);
+            Vector3 pointMin = new Vector3(pointMinX, pointMinY);
 
             if (polygonCollider2D.OverlapPoint(pointMin))
             {
                 return pointMin;
             }
         }
-        //return new Vector2(0, 0);
     }
 
+    public bool IsOnFire(Room room)
+    {
+        foreach (GameObject fire in fires)
+        {
+            var fireObject = fire.GetComponent<Fire>();
+            if (!fireObject.extinguished && fireObject.room == room)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

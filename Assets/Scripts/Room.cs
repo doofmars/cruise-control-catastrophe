@@ -2,9 +2,6 @@
 
 public class Room : MonoBehaviour
 {
-    public bool isOnFire = false;
-
-    public GameObject fireInstance;
 
     public string roomName;
     public LayoutManager layoutManager;
@@ -20,13 +17,12 @@ public class Room : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fireInstance.SetActive(isOnFire);
     }
 
     private void FixedUpdate()
     {
         var time = Time.deltaTime;
-        if (isOnFire)
+        if (layoutManager.fireStarter.IsOnFire(this))
         {
             temperature += time * 15f;
         }
@@ -43,7 +39,7 @@ public class Room : MonoBehaviour
             var asteroid = collision.gameObject.GetComponent<Asteroid>();
             if (layoutManager.shieldGenerator.energyBar.currentEnergy <= 0f && asteroid.CanCollide())
             {
-                isOnFire = true;
+                layoutManager.fireStarter.StartFireInRoom(this);
                 _explosion.Play();
                 asteroid.Deactivate();
             }
