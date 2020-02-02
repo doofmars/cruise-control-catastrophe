@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ShipDamage : MonoBehaviour
 {
@@ -28,8 +25,8 @@ public class ShipDamage : MonoBehaviour
                 _roomsOnFire++;
             }
         }
-        
-        (_shipHealthBar.GetComponent("ShipDamageBar") as ShipDamageBar).currentDamage += (int) Math.Pow(2,_roomsOnFire)* firedamage;
+
+        (_shipHealthBar.GetComponent("ShipDamageBar") as ShipDamageBar).currentDamage += (int)Math.Pow(2, _roomsOnFire - 1) * firedamage;
     }
 
 }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ShipDamageBar : MonoBehaviour
@@ -26,6 +24,6 @@ public class ShipDamageBar : MonoBehaviour
 
     private void loseGame()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Lose");
     }
 }

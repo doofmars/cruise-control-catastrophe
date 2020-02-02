@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Firestarter : MonoBehaviour
 {
@@ -25,20 +23,20 @@ public class Firestarter : MonoBehaviour
         rooms = layoutManager.GetRooms();
         Debug.Log(rooms.Length);
 
-        for(int i = 0; i < rooms.Length; i++)
+        for (int i = 0; i < rooms.Length; i++)
         {
             Room r = rooms[i];
 
             r.fireInstance = Instantiate(firePrefab);
             r.fireInstance.transform.parent = r.transform;
-            
+
             PolygonCollider2D roomCollider = r.gameObject.GetComponent<PolygonCollider2D>();
             while (true)
             {
                 Vector3 extents = r.fireInstance.GetComponent<Collider2D>().bounds.extents;
                 Vector2 extents2D = new Vector2(extents.x, extents.y);
                 Vector2 minPointForFire = getRandomPointInBounds(roomCollider);
-                Vector2 maxPointForFire = minPointForFire + 2*extents2D;
+                Vector2 maxPointForFire = minPointForFire + 2 * extents2D;
                 if (roomCollider.OverlapPoint(maxPointForFire))
                 {
                     r.fireInstance.transform.position = minPointForFire + extents2D;
@@ -102,7 +100,7 @@ public class Firestarter : MonoBehaviour
         Vector3 min = polygonCollider2D.bounds.min;
         Vector3 max = polygonCollider2D.bounds.max;
 
-        while(true)
+        while (true)
         {
             float pointMinX = Random.Range(min.x, max.x);
             float pointMinY = Random.Range(min.y, max.y);

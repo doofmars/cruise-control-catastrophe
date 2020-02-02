@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Room : MonoBehaviour
 {
@@ -12,7 +10,7 @@ public class Room : MonoBehaviour
     public LayoutManager layoutManager;
 
     public float temperature = 290f;
-    
+
     void Start()
     {
     }
@@ -29,7 +27,8 @@ public class Room : MonoBehaviour
         if (isOnFire)
         {
             temperature += time * 15f;
-        } else
+        }
+        else
         {
             temperature -= 0.1f * (temperature - 290f) * time;
         }
