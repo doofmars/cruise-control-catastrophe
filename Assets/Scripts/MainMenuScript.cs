@@ -12,19 +12,24 @@ public class MainMenuScript : MonoBehaviour
         Application.Quit();
     }
 
-    public void showSettings()
+    public void showHowTo()
     {
-
+        SceneManager.LoadScene("HowTo");
     }
 
     public void showCredits()
     {
-
+        SceneManager.LoadScene("Credits");
     }
 
     public void startGame()
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void showMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
 }
