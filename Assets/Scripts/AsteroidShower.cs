@@ -35,12 +35,18 @@ public class AsteroidShower : MonoBehaviour
                 SpawnAsteroid();
             }
         }
+        var destroyed = new List<GameObject>();
         foreach (GameObject asteroid in asteroids)
         {
             if (asteroid.transform.position.magnitude > screenBounds.size.magnitude)
             {
-                Destroy(asteroid);
+                destroyed.Add(asteroid);
             }
+        }
+        foreach (GameObject asteroid in destroyed)
+        {
+            asteroids.Remove(asteroid);
+            Destroy(asteroid);
         }
     }
 
