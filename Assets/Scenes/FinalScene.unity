@@ -16803,6 +16803,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -176.25
       objectReference: {fileID: 0}
+    - target: {fileID: 5235756915429409304, guid: a8ee020af71173140ab58165f15d72b0,
+        type: 3}
+      propertyPath: layoutManager
+      value: 
+      objectReference: {fileID: 1757380453}
     - target: {fileID: 5235756915429409311, guid: a8ee020af71173140ab58165f15d72b0,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -17049,7 +17054,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldGenerator: {fileID: 111521566}
-  shieldHitPrefab: {fileID: 0}
+  shieldHitPrefab: {fileID: 1272421808147363220, guid: b4cd6aa3d05c66b4d9957cacd8faa907,
+    type: 3}
 --- !u!70 &1549738725
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -17601,6 +17607,11 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 284414165250867091, guid: 24d2414a276e6bb42ac798ccfe30fc93,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 3e7314ac14033cc4b82d104d46763918, type: 2}
     - target: {fileID: 284414165250867094, guid: 24d2414a276e6bb42ac798ccfe30fc93,
         type: 3}
       propertyPath: uiManager
@@ -17621,7 +17632,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 284414165250867094, guid: 24d2414a276e6bb42ac798ccfe30fc93, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 24d2414a276e6bb42ac798ccfe30fc93, type: 3}
 --- !u!1001 &6588779954356240265
 PrefabInstance:
