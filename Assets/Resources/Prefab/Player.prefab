@@ -102,7 +102,7 @@ MonoBehaviour:
   sprintBarDecay: 4
   sprintingSpeedBonusFactor: 1.7
   runSpeed: 5
-  maxAcceleration: 4
+  maxAcceleration: 100
   airResistance: 0.1
 --- !u!114 &284414165250867094
 MonoBehaviour:

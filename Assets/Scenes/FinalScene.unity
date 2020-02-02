@@ -16705,16 +16705,6 @@ PrefabInstance:
       propertyPath: sprintbar
       value: 
       objectReference: {fileID: 836014099}
-    - target: {fileID: 284414165250867088, guid: 24d2414a276e6bb42ac798ccfe30fc93,
-        type: 3}
-      propertyPath: gravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 284414165250867088, guid: 24d2414a276e6bb42ac798ccfe30fc93,
-        type: 3}
-      propertyPath: maxAcceleration
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 284414165250867089, guid: 24d2414a276e6bb42ac798ccfe30fc93,
         type: 3}
       propertyPath: m_LocalPosition.x
