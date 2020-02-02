@@ -33,26 +33,4 @@ public class PlayerScript : MonoBehaviour
             currentRoom = (room.GetComponent("Room") as Room);
         }
     }
-
-    //private void OnTriggerStay2D(Collider2D other)
-    //{
-    //    GameObject room = other.gameObject;
-    //    if (room.CompareTag("Room"))
-    //    {
-    //        // Room entered
-    //        currentRoom = (room.GetComponent("Room") as Room);
-    //    }
-    //}
-
-    //private void OnTriggerExit2D(Collider2D other)
-    //{
-    //    GameObject room = other.gameObject;
-    //    if (room.CompareTag("Room"))
-    //    {
-    //        // Player exits room
-    //        string name = (room.GetComponent("Room") as Room).roomName;
-    //        Debug.Log("Player exited room" + name);
-    //        currentRoom = null;
-    //    }
-    //}
 }

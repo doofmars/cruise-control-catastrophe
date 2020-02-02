@@ -43,7 +43,6 @@ public class ElectricalFailureInducer : MonoBehaviour
                     machine.healthBar.currentHealth -= machine.healthBar.maxHealth * 0.2f;
                     var after = machine.healthBar.currentHealth;
                     _sparkSFX.Play();
-                    Debug.Log("Machine " + machine.name + " had an electrical failure, before: " + before + " after: " + after);
                 }
             }
         }
