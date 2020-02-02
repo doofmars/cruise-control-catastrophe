@@ -15759,7 +15759,12 @@ PrefabInstance:
     - target: {fileID: 4621897948880752666, guid: cc7f7f1a9484167489b2cee97978688f,
         type: 3}
       propertyPath: automaticChargeRate
-      value: 5
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621897948880752666, guid: cc7f7f1a9484167489b2cee97978688f,
+        type: 3}
+      propertyPath: manualChargeRate
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6093859979262062849, guid: cc7f7f1a9484167489b2cee97978688f,
         type: 3}
@@ -16873,6 +16878,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 8.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478255816862936527, guid: a8ee020af71173140ab58165f15d72b0,
+        type: 3}
+      propertyPath: maxEnergy
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7482131288148640185, guid: a8ee020af71173140ab58165f15d72b0,
         type: 3}
