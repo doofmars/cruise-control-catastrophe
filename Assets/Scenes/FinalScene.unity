@@ -16218,6 +16218,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shieldGenerator: {fileID: 111521566}
+  shieldHitPrefab: {fileID: 308442190412874247, guid: 751cbfa6a93ae2247994a6add96c65cd,
+    type: 3}
 --- !u!70 &1549738725
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
