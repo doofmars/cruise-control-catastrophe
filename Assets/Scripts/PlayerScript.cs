@@ -18,11 +18,11 @@ public class PlayerScript : MonoBehaviour
         {
             if (currentRoom != null && currentRoom.CompareTag("Room") && (currentRoom.GetComponent("Room") as Room).isOnFire)
             {
-                Debug.Log("Player has extingushed room");
                 (currentRoom.GetComponent("Room") as Room).isOnFire = false;
             }
         }
-        currentRoomIndicatorText.text = currentRoom.roomName + " (" + currentRoom.temperature + "K)";
+        
+        currentRoomIndicatorText.text = string.Format("{0} ({1:0}K)", currentRoom.roomName, currentRoom.temperature);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
