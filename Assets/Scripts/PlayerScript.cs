@@ -5,10 +5,10 @@ public class PlayerScript : MonoBehaviour
 {
     private Room currentRoom;
     public UiManager uiManager;
-    private Text currentRoomIndicatorText;
+    //private Text currentRoomIndicatorText;
     void Start()
     {
-        currentRoomIndicatorText = uiManager.currentRoomIndicator;
+        //currentRoomIndicatorText = uiManager.currentRoomIndicator;
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class PlayerScript : MonoBehaviour
             }
         }
         
-        currentRoomIndicatorText.text = string.Format("{0} ({1:0}K)", currentRoom.roomName, currentRoom.temperature);
+        //currentRoomIndicatorText.text = string.Format("{0} ({1:0}K)", currentRoom.roomName, currentRoom.temperature);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

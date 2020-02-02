@@ -78,8 +78,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bar: {fileID: 7083605240353709435}
-  maxEnergy: 100
-  startingEnergy: 100
+  maxEnergy: 50
+  startingEnergy: 50
 --- !u!1 &7083605241156461935
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,7 +26,7 @@ public class ShipDamage : MonoBehaviour
             }
         }
 
-        (_shipHealthBar.GetComponent("ShipDamageBar") as ShipDamageBar).currentDamage += (int)Math.Pow(2, _roomsOnFire - 1) * firedamage;
+        (_shipHealthBar.GetComponent("ShipDamageBar") as ShipDamageBar).currentDamage += (int)Math.Pow(1.6, _roomsOnFire - 1) * firedamage;
     }
 
 }
