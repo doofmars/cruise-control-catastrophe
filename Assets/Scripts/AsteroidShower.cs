@@ -19,6 +19,7 @@ public class AsteroidShower : MonoBehaviour
     void Start()
     {
         screenBounds = CameraExtensions.OrthographicBounds(camera);
+        timer = waitTime;
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class AsteroidShower : MonoBehaviour
         var destroyed = new List<GameObject>();
         foreach (GameObject asteroid in asteroids)
         {
-            if (asteroid.transform.position.magnitude > screenBounds.size.magnitude)
+            if (asteroid.GetComponent<Asteroid>().dead || asteroid.transform.position.magnitude > screenBounds.size.magnitude)
             {
                 destroyed.Add(asteroid);
             }
@@ -58,10 +59,14 @@ public class AsteroidShower : MonoBehaviour
         var position = new Vector3(Mathf.Sin(angle) * screenBounds.size.x, Mathf.Cos(angle) * screenBounds.size.y);
         var target = new Vector3(xRnd * screenBounds.size.x, yRnd * screenBounds.size.y);
 
+        float mass = Random.Range(5.0f, 40.0f);
+
         var asteroid = Instantiate(asteroidPrefab);
         asteroid.transform.position = position;
+        asteroid.transform.localScale = new Vector3(mass / 15.0f, mass / 15.0f);
         var body = asteroid.GetComponent<Rigidbody2D>();
         body.velocity = (target - position) * 0.2f;
+        body.mass = mass;
         asteroids.Add(asteroid);
     }
 }

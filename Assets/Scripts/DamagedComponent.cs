@@ -11,7 +11,7 @@ public class DamagedComponent : MonoBehaviour
     public float repairRate = 20f;
     public float maxOperatingTemperature = 400f;
     private bool broken = false;
-    private int repairPersonnel = 0;
+    public int repairPersonnel { get; private set; } = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +24,9 @@ public class DamagedComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var time = Time.deltaTime;
         if (parent.temperature > maxOperatingTemperature)
         {
-            var time = Time.deltaTime;
             healthBar.currentHealth -= time * 0.05f * maxHealth;
         }
         if (healthBar.currentHealth <= 0f && !broken)
@@ -36,8 +36,7 @@ public class DamagedComponent : MonoBehaviour
         }
         if (!healthBar.IsFull() && !broken && repairPersonnel > 0)
         {
-            float timer = Time.deltaTime;
-            healthBar.currentHealth += timer * repairRate * repairPersonnel;
+            healthBar.currentHealth += time * repairRate * repairPersonnel;
         }
     }
 

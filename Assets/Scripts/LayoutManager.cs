@@ -5,6 +5,7 @@ public class LayoutManager : MonoBehaviour
 {
 
     public UiManager uiManager;
+    public ShieldGenerator shieldGenerator;
 
     // Start is called before the first frame update
     void Start()
