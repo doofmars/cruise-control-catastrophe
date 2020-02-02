@@ -17,6 +17,7 @@ public class DamagedComponent : MonoBehaviour
     void Start()
     {
         healthBar.maxHealth = maxHealth;
+        healthBar.currentHealth = maxHealth;
         parent = transform.GetComponentInParent<Room>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }

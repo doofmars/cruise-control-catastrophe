@@ -802,7 +802,7 @@ MonoBehaviour:
   m_text: "Your spaceship is close to breaking down. You need to get to safety fast!\n\nFly
     towards safety by staying in the cockpit.\nKeep your ship from breaking down
     by repairing breaking components and extinguishing fires.\n\nControls: \nWASD
-    - Movement\nSpace - Sprint\nCtrl - Extinguish fire\nEsc - Back to Main Menu"
+    - Movement\nSpace - Sprint\nEsc - Back to Main Menu"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dc24da462abd48d45b992fa9f459e4bd, type: 2}
   m_sharedMaterial: {fileID: -233775850944260544, guid: dc24da462abd48d45b992fa9f459e4bd,
@@ -872,12 +872,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -58.221863}
   m_textInfo:
     textComponent: {fileID: 1584735063}
-    characterCount: 302
+    characterCount: 279
     spriteCount: 0
-    spaceCount: 54
-    wordCount: 52
+    spaceCount: 50
+    wordCount: 48
     linkCount: 0
-    lineCount: 12
+    lineCount: 11
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
