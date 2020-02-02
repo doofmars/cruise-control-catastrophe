@@ -43,11 +43,21 @@ public class DamagedComponent : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        repairPersonnel++;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            repairPersonnel++;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        repairPersonnel--;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            repairPersonnel--;
+        }
+        if (repairPersonnel < 0)
+        {
+            Debug.Log("Repair Personnel less than 0!");
+        }
     }
 }
