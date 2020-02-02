@@ -18,8 +18,11 @@ public class ShieldGenerator : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+
+    private void FixedUpdate()
     {
+        
+    
         var time = Time.deltaTime;
         if (machine.healthBar.IsFull() && machine.repairPersonnel > 0)
         {

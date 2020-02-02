@@ -50,8 +50,11 @@ public class Firestarter : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+
+    private void FixedUpdate()
     {
+        
+    
         timer += Time.deltaTime;
 
         // Check if we have reached beyond 2 seconds.

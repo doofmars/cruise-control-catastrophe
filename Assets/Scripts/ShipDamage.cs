@@ -15,8 +15,11 @@ public class ShipDamage : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+
+    private void FixedUpdate()
     {
+        
+   
         _roomsOnFire = 0;
         for (int i = 0; i < rooms.Length; i++)
         {

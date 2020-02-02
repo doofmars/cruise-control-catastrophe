@@ -17,8 +17,7 @@ public class GoalProgress : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         if (playersInsideRoom > 0)
         {
@@ -26,7 +25,7 @@ public class GoalProgress : MonoBehaviour
             if (engine1.healthBar.currentHealth == 0) numberOfBrokenEngines++;
             if (engine2.healthBar.currentHealth == 0) numberOfBrokenEngines++;
             if (engine3.healthBar.currentHealth == 0) numberOfBrokenEngines++;
-            float ratioOfIntactEngines = (3-numberOfBrokenEngines) / 3.0f;
+            float ratioOfIntactEngines = (3 - numberOfBrokenEngines) / 3.0f;
             victoryProgress.currentHealth += progressRate * ratioOfIntactEngines;
             if (victoryProgress.currentHealth >= victoryProgress.maxHealth)
                 SceneManager.LoadScene("Win");

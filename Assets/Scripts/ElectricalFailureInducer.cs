@@ -21,8 +21,8 @@ public class ElectricalFailureInducer : MonoBehaviour
         _sparkSFX = GetComponents<AudioSource>()[1];
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void FixedUpdate()
     {
         timer += Time.deltaTime;
 

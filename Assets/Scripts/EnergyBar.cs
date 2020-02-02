@@ -41,7 +41,8 @@ public class EnergyBar : MonoBehaviour
         _shieldsfx = gameObject.GetComponent<AudioSource>();
     }
 
-    private void Update()
+
+    private void FixedUpdate()
     {
         if (!_shielddown)
         {

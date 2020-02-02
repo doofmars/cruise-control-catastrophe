@@ -21,8 +21,7 @@ public class DamagedComponent : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         var time = Time.deltaTime;
         if (parent.temperature > maxOperatingTemperature)
