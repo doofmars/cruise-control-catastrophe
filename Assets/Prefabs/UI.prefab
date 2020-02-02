@@ -101,7 +101,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: acd4f8a662e66af46a67a0c4cc615ffb, type: 3}
     m_FontSize: 25
     m_FontStyle: 1
     m_BestFit: 0
@@ -272,16 +272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddea563c68a81c488b93a738820ec43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bar: {fileID: 0}
-  hideWhenFull: 1
-  hideWhenEmpty: 1
-  maxHealth: 100
-  startingHealth: 100
-  bar: {fileID: 0}
-  hideWhenFull: 1
-  hideWhenEmpty: 1
-  maxHealth: 100
-  startingHealth: 100
+  sprintbar: {fileID: 0}
+  recoveryRate: 0.5
 --- !u!1001 &2763692941658320809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -372,7 +364,7 @@ PrefabInstance:
     - target: {fileID: 4724068020205645328, guid: 68feb108f6a7ec54693e1f168e4c2479,
         type: 3}
       propertyPath: maxHealth
-      value: 100
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4724068020205645328, guid: 68feb108f6a7ec54693e1f168e4c2479,
         type: 3}
@@ -383,6 +375,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4724068020205645328, guid: 68feb108f6a7ec54693e1f168e4c2479,
+        type: 3}
+      propertyPath: startingHealth
+      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68feb108f6a7ec54693e1f168e4c2479, type: 3}

@@ -114,7 +114,6 @@ Transform:
   - {fileID: 1111440252584623573}
   - {fileID: 1111440251009418428}
   - {fileID: 1111440252993976435}
-  - {fileID: 1111440252249299522}
   - {fileID: 6534947638997325925}
   - {fileID: 1421929171343228589}
   - {fileID: 6514053321022311013}
@@ -122,88 +121,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1111440252249299525
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1111440252249299522}
-  - component: {fileID: 1111440252249299523}
-  - component: {fileID: 2505372165715823387}
-  m_Layer: 8
-  m_Name: Hallway
-  m_TagString: Room
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1111440252249299522
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111440252249299525}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1111440251049566515}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &1111440252249299523
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111440252249299525}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.06479718, y: 0.4194739}
-      - {x: 0.21649565, y: 3.1695635}
-      - {x: -0.95788646, y: 3.1565273}
-      - {x: -0.7095289, y: 0.4133426}
-      - {x: -1.7221388, y: 0.40873614}
-      - {x: -1.7010415, y: -0.80093455}
-      - {x: 6.043084, y: -0.7401786}
-      - {x: 6.0128703, y: 0.43486795}
---- !u!114 &2505372165715823387
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111440252249299525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4883703ce04546a4fb0d3972c82219b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnFire: 0
-  fireInstance: {fileID: 0}
-  roomName: Hallway
-  layoutManager: {fileID: 0}
-  temperature: 290
 --- !u!1 &1111440252584623572
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,7 +204,7 @@ MonoBehaviour:
   engine1: {fileID: 0}
   engine2: {fileID: 0}
   engine3: {fileID: 0}
-  progressRate: 5
+  progressRate: 2.5
 --- !u!114 &2505372165715823382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -414,7 +331,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1111440251049566515}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &2737491227465309727
 PolygonCollider2D:
@@ -494,7 +411,7 @@ Transform:
   m_Children:
   - {fileID: 312073536802396782}
   m_Father: {fileID: 1111440251049566515}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &3545888838767132273
 PolygonCollider2D:
@@ -579,7 +496,7 @@ Transform:
   - {fileID: 2900274023804831528}
   - {fileID: 3971926837657989751}
   m_Father: {fileID: 1111440251049566515}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &1721795773675777856
 PolygonCollider2D:
@@ -660,7 +577,7 @@ Transform:
   m_Children:
   - {fileID: 3745555808969533038}
   m_Father: {fileID: 1111440251049566515}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &5815670952550224737
 PolygonCollider2D:
