@@ -16,8 +16,11 @@ public class ShipDamage : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+
+    private void FixedUpdate()
     {
+        
+   
         _roomsOnFire = 0;
         for (int i = 0; i < rooms.Length; i++)
         {
@@ -27,7 +30,7 @@ public class ShipDamage : MonoBehaviour
             }
         }
 
-        (_shipHealthBar.GetComponent("ShipDamageBar") as ShipDamageBar).currentDamage += (int)Math.Pow(2, _roomsOnFire - 1) * firedamage;
+        (_shipHealthBar.GetComponent("ShipDamageBar") as ShipDamageBar).currentDamage += (int)Math.Pow(1.6, _roomsOnFire - 1) * firedamage;
     }
 
 }

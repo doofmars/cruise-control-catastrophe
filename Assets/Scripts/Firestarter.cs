@@ -52,7 +52,7 @@ public class Firestarter : MonoBehaviour
         if (attempts == maxAttempts)
         {
             Debug.Log("Could not start fire in " + room.roomName + " within " + maxAttempts + " attempts.\n"
-                + "Bounds: " + fireCollider.bounds.min + fireCollider.bounds.max );
+                + "Bounds: " + fireCollider.bounds.min + fireCollider.bounds.max);
             Destroy(fire);
         }
         else
@@ -62,9 +62,9 @@ public class Firestarter : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
+       
         timer += Time.deltaTime;
 
         // Check if we have reached beyond 2 seconds.

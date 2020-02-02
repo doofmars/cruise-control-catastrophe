@@ -26,6 +26,9 @@ Sprites:
 	brown_asteroid.png by FunwithPixels
 	https://opengameart.org/content/brown-asteroid
 
+	Animated Blue Ring Explosion by Grahhhhh
+	https://opengameart.org/content/animated-blue-ring-explosion
+
 Graphics:
 
 	The Carina Nebula by ESO

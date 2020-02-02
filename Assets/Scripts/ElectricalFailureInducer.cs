@@ -6,6 +6,7 @@ public class ElectricalFailureInducer : MonoBehaviour
 {
     public int fireRate = 1;
     public float waitTime = 1.0f;
+    public float damangeAsPercentageOfFull = 0.2f;
 
     public LayoutManager layoutManager;
 
@@ -20,8 +21,8 @@ public class ElectricalFailureInducer : MonoBehaviour
         _sparkSFX = GetComponents<AudioSource>()[1];
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void FixedUpdate()
     {
         timer += Time.deltaTime;
 
@@ -40,7 +41,7 @@ public class ElectricalFailureInducer : MonoBehaviour
                 {
                     var machine = components[machineIndex];
                     var before = machine.healthBar.currentHealth;
-                    machine.healthBar.currentHealth -= machine.healthBar.maxHealth * 0.2f;
+                    machine.healthBar.currentHealth -= machine.healthBar.maxHealth * damangeAsPercentageOfFull;
                     var after = machine.healthBar.currentHealth;
                     _sparkSFX.Play();
                 }

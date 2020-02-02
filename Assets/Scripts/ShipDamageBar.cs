@@ -12,8 +12,11 @@ public class ShipDamageBar : MonoBehaviour
 
     }
 
-    void Update()
+
+    private void FixedUpdate()
     {
+        
+    
         vector3.x = currentDamage / maxHealth;
         bar.localScale = vector3;
         if (currentDamage >= maxHealth)

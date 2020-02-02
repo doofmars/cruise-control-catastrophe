@@ -5,9 +5,6 @@ public class PlayerScript : MonoBehaviour
 {
     private Room currentRoom;
     public UiManager uiManager;
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()

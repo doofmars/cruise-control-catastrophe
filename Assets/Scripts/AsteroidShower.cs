@@ -21,8 +21,7 @@ public class AsteroidShower : MonoBehaviour
         timer = waitTime;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
         timer += Time.deltaTime;
 
@@ -55,7 +54,7 @@ public class AsteroidShower : MonoBehaviour
         float angle = Random.Range(0.0f, 2.0f * Mathf.PI);
         float xRnd = Random.Range(0.0f, 1.0f) - 0.5f;
         float yRnd = Random.Range(0.0f, 1.0f) - 0.5f;
-        var position = new Vector3(Mathf.Sin(angle) * screenBounds.size.x, Mathf.Cos(angle) * screenBounds.size.y);
+        var position = new Vector3(Mathf.Sin(angle) * screenBounds.size.x, Mathf.Cos(angle) * screenBounds.size.y, 1f);
         var target = new Vector3(xRnd * screenBounds.size.x, yRnd * screenBounds.size.y);
 
         float mass = Random.Range(5.0f, 40.0f);
