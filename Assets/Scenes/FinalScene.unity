@@ -16894,6 +16894,11 @@ PrefabInstance:
       propertyPath: startingHealth
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 7755091038633472768, guid: a8ee020af71173140ab58165f15d72b0,
+        type: 3}
+      propertyPath: startingHealth
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8080024087619221085, guid: a8ee020af71173140ab58165f15d72b0,
         type: 3}
       propertyPath: sprintbar

@@ -4,11 +4,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D body;
+    public GravityGenerator gravityGenerator;
 
     float horizontal;
     float vertical;
     bool sprinting = false;
-    public float gravity = 1.0f;
     public HealthBar sprintbar;
     public float sprintBarDecay = 1f;
     public float sprintingSpeedBonusFactor = 1.5f;
@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
         }
         var time = Time.deltaTime;
 
-        float gripFactor = gravity + 2f * airResistance;
+        float gripFactor = gravityGenerator.gravity + 2f * airResistance;
 
         var targetV = new Vector3(horizontal * runSpeed, vertical * runSpeed);
         var diffV = targetV - currentSpeed;
